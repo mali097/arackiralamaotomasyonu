@@ -5,7 +5,7 @@
 #include <stdio.h> 
 #include <fstream>                  
 #include <iostream>
-
+//MÃ¼min Ali KarataÅŸ 2312721043
 using namespace std;
 
 struct Araba
@@ -29,12 +29,12 @@ int main(){
 	system("cls");
 	
 	cout << "*<<<<<<<Hosgeldiniz>>>>>>*"<<endl;
-	cout << "*      Seçim Yapiniz     *"<<endl;
+	cout << "*      SeÃ§im Yapiniz     *"<<endl;
 	cout << "*   1- Araba Ekleme      *"<<endl;
 	cout << "*   2- Araba Listeleme   *"<<endl;
 	cout << "*     3- Araba Arama     *"<<endl;
 	cout << "*    4-  Araba Sil       *"<<endl;
-	cout << "*    5- Araba Düzenle    *"<<endl;
+	cout << "*    5- Araba DÃ¼zenle    *"<<endl;
     char secim;
 	cin>> secim;
 	
@@ -67,7 +67,7 @@ int main(){
 		}
 	}
 	
-	cout << "Anamenuye Donmek icin: a basin cikmak için: c" <<endl ; 
+	cout << "Anamenuye Donmek icin: a basin cikmak iÃ§in: c" <<endl ; 
 	anamenu=getche();
 	
     }while(anamenu=='a');
@@ -88,11 +88,11 @@ void arabaEkle()
 
 	cout << "Araba marka Giriniz" << endl;
 	cin>> car.arabamarka;
-	cout << "Yakıt Türü Giriniz" << endl;
+	cout << "YakÃ½t TÃ¼rÃ¼ Giriniz" << endl;
 	cin>> car.Yakitturu;
 	cout << "Araba plaka giriniz" << endl;
 	cin>>car.arabaplaka;
-	cout << "Araba Fiyatı giriniz" << endl;
+	cout << "Araba FiyatÃ½ giriniz" << endl;
 	cin>>car.arabafiyati;
 		
 	cout << endl;
@@ -117,7 +117,7 @@ void arabaListeleme()
     
 	oku.seekg(0,ios::end);
 	int kayits=oku.tellg()/sizeof(car);
-	cout << "Toplam Kiralanan araba Sayısı:"<< kayits << endl;
+	cout << "Toplam Kiralanan araba SayÃ½sÃ½:"<< kayits << endl;
 	
 	if(kayits>0)
 	{
@@ -127,10 +127,10 @@ void arabaListeleme()
 			oku.read((char*)&car, sizeof(car));	
 		
 			cout << i+1 << ". araba bilgileri"<< endl;
-			cout << "Araba Markası: "<< car.arabamarka <<endl ;
-			cout << "Araba Yakıt türü: "<< car.Yakitturu <<endl ;
+			cout << "Araba MarkasÃ½: "<< car.arabamarka <<endl ;
+			cout << "Araba YakÃ½t tÃ¼rÃ¼: "<< car.Yakitturu <<endl ;
 			cout << "Araba Plaka: "<< car.arabaplaka <<endl ;
-			cout << "Araba Fiyatı: "<< car.arabafiyati <<endl ;
+			cout << "Araba FiyatÃ½: "<< car.arabafiyati <<endl ;
 			
 		}
 		
@@ -150,7 +150,7 @@ void arabaArama()
 	int kayits=oku.tellg()/sizeof(car);
 //	cout << "Toplam Ogrenci Kayit Sayisi:"<< kayits << endl;
 
-cout <<"Aranan araba plakasını Giriniz"<< endl;
+cout <<"Aranan araba plakasÃ½nÃ½ Giriniz"<< endl;
 char arabaplaka[80];
 cin>> arabaplaka;
  		
@@ -164,11 +164,11 @@ cin>> arabaplaka;
 			
 			if(strcmp(car.arabaplaka,car.arabaplaka)==0)
 			{
-			cout <<  "Araç Bilgileri"<< endl;
-			cout << "Araç Markası: "<< car.arabamarka <<endl ;
-			cout << "araç yakıt türü: "<< car.Yakitturu <<endl ;
-			cout << "araç plaka: "<< car.arabaplaka <<endl ;
-			cout << "araç fiyatı: "<< car.arabafiyati <<endl ;
+			cout <<  "AraÃ§ Bilgileri"<< endl;
+			cout << "AraÃ§ MarkasÃ½: "<< car.arabamarka <<endl ;
+			cout << "araÃ§ yakÃ½t tÃ¼rÃ¼: "<< car.Yakitturu <<endl ;
+			cout << "araÃ§ plaka: "<< car.arabaplaka <<endl ;
+			cout << "araÃ§ fiyatÃ½: "<< car.arabafiyati <<endl ;
 			
 		    }
 		}
@@ -205,11 +205,11 @@ void arabaSil()
      if(strcmp(car.arabaplaka,arabaplaka)==0)
        {
                  cout<<endl;
-                 cout<<"Arabanın";
-                  cout<<"\nMarkası : "<<car.arabamarka<<endl;
-                   cout<<"\nYakıt türü: "<<car.Yakitturu;
+                 cout<<"ArabanÃ½n";
+                  cout<<"\nMarkasÃ½ : "<<car.arabamarka<<endl;
+                   cout<<"\nYakÃ½t tÃ¼rÃ¼: "<<car.Yakitturu;
                    
-                cout<<"\nFıyatı: "<<car.arabafiyati;
+                cout<<"\nFÃ½yatÃ½: "<<car.arabafiyati;
                
          	 				  
                 cout<<"\n\nSilmek Istediginiz plaka Bu Mu? : ";
@@ -283,11 +283,11 @@ void arabaDuzenle()
      		  {
      		  	
                  cout<<endl;
-                 cout<<"Arabanın";
-                 cout<<"\nMarkası : "<<car.arabamarka<<endl;
-                 cout<<"\nYakıt Türü : "<<car.Yakitturu;
-                 cout<<"\nFiyatı : "<<car.arabafiyati;
-                cout<<"\nPlakası : "<<car.arabaplaka;
+                 cout<<"ArabanÃ½n";
+                 cout<<"\nMarkasÃ½ : "<<car.arabamarka<<endl;
+                 cout<<"\nYakÃ½t TÃ¼rÃ¼ : "<<car.Yakitturu;
+                 cout<<"\nFiyatÃ½ : "<<car.arabafiyati;
+                cout<<"\nPlakasÃ½ : "<<car.arabaplaka;
                  
                   cout<<"\n\nDuzeltmek Istediginiz Araba Bu Mu? [E/H] : ";
                   secim=getche();
@@ -297,9 +297,9 @@ void arabaDuzenle()
                         ofstream dosya("Yedek.dat",ios::app|ios::binary);
                         cout << "\nAraba Marka giriniz" << endl;
 						cin>> car.arabamarka;
-						cout << "Araba Yakıt türü Giriniz" << endl;
+						cout << "Araba YakÃ½t tÃ¼rÃ¼ Giriniz" << endl;
 						cin>> car.Yakitturu;
-						cout << "Araba Fiyatı Giriniz" << endl;
+						cout << "Araba FiyatÃ½ Giriniz" << endl;
 						cin>> car.arabafiyati;
 						cout << "Araba Plaka Giriniz" << endl;
 						cin>>car.arabaplaka;
