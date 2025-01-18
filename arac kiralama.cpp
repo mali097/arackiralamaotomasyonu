@@ -98,7 +98,7 @@ void arabaEkle()
 	cout << endl;
 	yaz.write((char*)&car, sizeof(car));	
 	adet++;	
-	cout << "Baska Araba eklemek istermisiniz?" << endl;
+	cout << "Baska Araba eklemek istermisiniz?(E/H)" << endl;
 	secim=getche();
 	cout << endl;
 	}while(secim=='e' || secim=='E');
